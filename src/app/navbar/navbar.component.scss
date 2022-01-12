@@ -1,0 +1,14 @@
+nav {
+  background-color: black;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+}
+a:link, a:active, a:visited {
+  color: white;
+  margin: 5px;
+  text-transform: none;
+}
