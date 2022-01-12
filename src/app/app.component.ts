@@ -7,16 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'primeiro-projeto';
-  valor: number;
-  destino: number;
+  transferencias: any[] = [];
 
   transferir($event: any) {
     console.log($event)
-    this.valor = $event.valor;
-    this.destino = $event.destino;
+    this.transferencias.push($event);
   }
 
-  exibirModalErro($event: any){
-    console.log($event)
+  mensagem() {
+    console.log("teste")
   }
+
 }

@@ -14,18 +14,10 @@ export class NovaTransferenciaComponent {
 
   @Output() aoTransferir = new EventEmitter<any>(); //exportar dados para o front-end
 
-  @Output() valoresComErro = new EventEmitter<any>();
-
   transferir() {
-    console.log('Nova transferencia solicitada.');
-    if (this.valor <= 1) {
-      this.valoresComErro.emit("Informe um valor válido")
-    } else {
-      console.log("Valor: "+this.valor+", destino: "+this.destino)
       var valorEmitir = {valor: this.valor, destino: this.destino} //emitir valor
       this.aoTransferir.emit(valorEmitir)
       this.limparCampos();
-    }
   }
 
   limparCampos() {
@@ -33,4 +25,3 @@ export class NovaTransferenciaComponent {
     this.destino = 0;
   }
 }
-
